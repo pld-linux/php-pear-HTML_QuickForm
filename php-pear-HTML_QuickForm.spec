@@ -12,7 +12,6 @@ Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-Patch0:		%{name}-cosmetic.patch
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear >= 4.3.0
@@ -57,7 +56,6 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
-#%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
