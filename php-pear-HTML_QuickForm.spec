@@ -1,18 +1,20 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		HTML
 %define		_subclass	QuickForm
+%define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_class}_%{_subclass} - methods for creating, validating, processing HTML forms
-Summary(pl):	%{_class}_%{_subclass} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
+Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
+Summary(pl):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
-Version:	2.3
-Release:	2
+Version:	3.1.1
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-URL:		http://pear.php.net/
-BuildRequires:	rpm-php-pearprov
-Requires:	php-pear
+# Source0-md5:	bc2546ef445c38267a08202796094810
+URL:		http://pear.php.net/package/%{_pearname}/
+BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+Requires:	php-pear >= 4.3.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,6 +34,8 @@ validating, processing HTML forms. Features:
 - Allows you to customize the look of your form in many ways.
 - Template-like form elements customization...
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Klasa HTML_QuickForm zawiera metody to tworzenia, kontroli poprawno¶ci
 i przetwarzania formularzy HTML. Cechy:
@@ -48,22 +52,27 @@ i przetwarzania formularzy HTML. Cechy:
 - pozwala na zmianê wygl±du formularza na wiele sposobów
 - modyfikacja elementów formularzy poprzez wzorce.
 
+Ta klasa ma w PEAR status: %{_status}.
+
 %prep
 %setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Renderer
 
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
-install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}/*.php                       $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/
+install %{_pearname}-%{version}/%{_subclass}/*.php          $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}/%{_subclass}/Renderer/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}/Renderer
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{php_pear_dir}/%{_class}/%{_subclass}
 %doc %{_pearname}-%{version}/docs/*
+%dir %{php_pear_dir}/%{_class}/%{_subclass}
+%dir %{php_pear_dir}/%{_class}/%{_subclass}/Renderer
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
+%{php_pear_dir}/%{_class}/%{_subclass}/Renderer/*.php
