@@ -3,15 +3,15 @@
 %define		_subclass	QuickForm
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_class}_%{_subclass} - methods for creating, validating, processing HTML forms
-Summary(pl):	%{_class}_%{_subclass} - metody do tworzenia, korekcji i przetwarzania formularzy HTML
+Summary(pl):	%{_class}_%{_subclass} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
 Version:	2.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-BuildRequires:	rpm-php-pearprov
 URL:		http://pear.php.net/
+BuildRequires:	rpm-php-pearprov
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -32,6 +32,20 @@ validating, processing HTML forms. Features:
 - Template-like form elements customization...
 
 %description -l pl
+Klasa HTML_QuickForm zawiera metody to tworzenia, kontroli poprawno¶ci
+i przetwarzania formularzy HTML. Cechy:
+- tworzy elementy formularzy ró¿nego typu zgodnie z xHTML
+- pozwala na wybór nieograniczonej liczby atrybutów HTML
+- pozwala tworzyæ w³asne elementy przy u¿yciu w³asnych klas
+- przetwarza warto¶ci z formularzy (nale¿y podmieniæ metodê process)
+- tworzy kod sprawdzaj±cy w JavaScripcie przy u¿yciu wyra¿eñ
+  regularnych
+- kontroluje poprawno¶æ wprowadzonych danych tak¿e po stronie serwera
+- pozwala na tworzenie w³asnych regu³ kontroluj±cych poprawno¶æ
+- obs³uguje upload plików
+- pozwala na "zamro¿enie" niektórych elementów formularza
+- pozwala na zmianê wygl±du formularza na wiele sposobów
+- modyfikacja elementów formularzy poprzez wzorce.
 
 %prep
 %setup -q -c
