@@ -6,7 +6,7 @@
 Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
 Summary(pl):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
-Version:	2.7
+Version:	2.9
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
