@@ -1,19 +1,21 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		HTML
 %define		_subclass	QuickForm
+%define		_status		stable
+
 %define		_pearname	%{_class}_%{_subclass}
 Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
 Summary(pl):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
-Version:	2.3
-Release:	4
+Version:	2.5
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 Patch0:		%{name}-cosmetic.patch
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
-Requires:	php-pear
+Requires:	php-pear >= 4.3.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,6 +35,8 @@ validating, processing HTML forms. Features:
 - Allows you to customize the look of your form in many ways.
 - Template-like form elements customization...
 
+This class has in PEAR status: %{_status}.
+
 %description -l pl
 Klasa HTML_QuickForm zawiera metody to tworzenia, kontroli poprawno¶ci
 i przetwarzania formularzy HTML. Cechy:
@@ -49,9 +53,11 @@ i przetwarzania formularzy HTML. Cechy:
 - pozwala na zmianê wygl±du formularza na wiele sposobów
 - modyfikacja elementów formularzy poprzez wzorce.
 
+Ta klasa ma w PEAR status: %{_status}.
+
 %prep
 %setup -q -c
-%patch0 -p1
+#%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
