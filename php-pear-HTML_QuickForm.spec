@@ -15,6 +15,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/%{_pearname}/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear >= 4.2.3
+Requires:	php-pear-HTML_Common >= 1.2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
