@@ -36,7 +36,7 @@ validating, processing HTML forms. Features:
 - Allows you to customize the look of your form in many ways.
 - Template-like form elements customization...
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Klasa HTML_QuickForm zawiera metody to tworzenia, kontroli poprawno¶ci
