@@ -18,6 +18,8 @@ Requires:	php-pear >= 4.2.3
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautoreq	'pear(Array)'
+
 %description
 The PEAR::HTML_QuickForm package provides methods for creating,
 validating, processing HTML forms. Features:
