@@ -2,8 +2,8 @@
 %define		_class		HTML
 %define		_subclass	QuickForm
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_class}_%{_subclass} - methods for creating, validating, processing HTML forms
-Summary(pl):	%{_class}_%{_subclass} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
+Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
+Summary(pl):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
 Version:	2.3
 Release:	3
