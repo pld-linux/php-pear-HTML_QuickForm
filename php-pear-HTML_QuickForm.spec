@@ -16,7 +16,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 URL:		http://pear.php.net/package/HTML_QuickForm/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-common >= 3:4.2
-Requires:	php-pear >= 4.3.0
+Requires:	php-pear >= 4:1.0-9.1
 Requires:	php-pear-HTML_Common >= 1.2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -73,7 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc install.log
 %doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
-%dir %{php_pear_dir}/%{_class}/%{_subclass}
 %dir %{php_pear_dir}/%{_class}/%{_subclass}/Renderer
 %dir %{php_pear_dir}/%{_class}/%{_subclass}/Rule
 %{php_pear_dir}/%{_class}/*.php
