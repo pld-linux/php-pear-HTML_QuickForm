@@ -8,7 +8,7 @@ Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
 Summary(pl):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
 Version:	3.2.6
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -61,11 +61,13 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
+mv docs/HTML_QuickForm/docs examples
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}
+install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_examplesdir}/%{name}-%{version}}
 %pear_package_install
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -73,7 +75,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log
-%doc docs/%{_pearname}/docs/*
 %{php_pear_dir}/.registry/*.reg
 %dir %{php_pear_dir}/%{_class}/%{_subclass}/Renderer
 %dir %{php_pear_dir}/%{_class}/%{_subclass}/Rule
@@ -81,3 +82,4 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/Renderer/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/Rule/*.php
+%{_examplesdir}/%{name}-%{version}
