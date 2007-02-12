@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
-Summary(pl):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
+Summary(pl.UTF-8):   %{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
 Version:	3.2.7
 Release:	1
@@ -41,21 +41,21 @@ validating, processing HTML forms. Features:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Klasa HTML_QuickForm zawiera metody to tworzenia, kontroli poprawno¶ci
+%description -l pl.UTF-8
+Klasa HTML_QuickForm zawiera metody to tworzenia, kontroli poprawnoÅ›ci
 i przetwarzania formularzy HTML. Cechy:
-- tworzy elementy formularzy ró¿nego typu zgodnie z xHTML
-- pozwala na wybór nieograniczonej liczby atrybutów HTML
-- pozwala tworzyæ w³asne elementy przy u¿yciu w³asnych klas
-- przetwarza warto¶ci z formularzy (nale¿y podmieniæ metodê process)
-- tworzy kod sprawdzaj±cy w JavaScripcie przy u¿yciu wyra¿eñ
+- tworzy elementy formularzy rÃ³Å¼nego typu zgodnie z xHTML
+- pozwala na wybÃ³r nieograniczonej liczby atrybutÃ³w HTML
+- pozwala tworzyÄ‡ wÅ‚asne elementy przy uÅ¼yciu wÅ‚asnych klas
+- przetwarza wartoÅ›ci z formularzy (naleÅ¼y podmieniÄ‡ metodÄ™ process)
+- tworzy kod sprawdzajÄ…cy w JavaScripcie przy uÅ¼yciu wyraÅ¼eÅ„
   regularnych
-- kontroluje poprawno¶æ wprowadzonych danych tak¿e po stronie serwera
-- pozwala na tworzenie w³asnych regu³ kontroluj±cych poprawno¶æ
-- obs³uguje upload plików
-- pozwala na "zamro¿enie" niektórych elementów formularza
-- pozwala na zmianê wygl±du formularza na wiele sposobów
-- modyfikacja elementów formularzy poprzez wzorce.
+- kontroluje poprawnoÅ›Ä‡ wprowadzonych danych takÅ¼e po stronie serwera
+- pozwala na tworzenie wÅ‚asnych reguÅ‚ kontrolujÄ…cych poprawnoÅ›Ä‡
+- obsÅ‚uguje upload plikÃ³w
+- pozwala na "zamroÅ¼enie" niektÃ³rych elementÃ³w formularza
+- pozwala na zmianÄ™ wyglÄ…du formularza na wiele sposobÃ³w
+- modyfikacja elementÃ³w formularzy poprzez wzorce.
 
 Ta klasa ma w PEAR status: %{_status}.
 
