@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
-Summary(pl.UTF-8):   %{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
+Summary(pl.UTF-8):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
 Version:	3.2.7
 Release:	1
