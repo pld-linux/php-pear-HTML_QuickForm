@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
 Summary(pl.UTF-8):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
-Version:	3.2.11
-Release:	2
+Version:	3.2.12
+Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	2320341c734fec60549a3e5145fbe8e7
+# Source0-md5:	5742a1e1a7400120bf48ffcd4acaf1d8
 URL:		http://pear.php.net/package/HTML_QuickForm/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
