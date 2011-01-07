@@ -1,17 +1,16 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		HTML
-%define		_subclass	QuickForm
 %define		_status		stable
-%define		_pearname	%{_class}_%{_subclass}
+%define		_pearname HTML_QuickForm
 Summary:	%{_pearname} - methods for creating, validating, processing HTML forms
 Summary(pl.UTF-8):	%{_pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{_pearname}
 Version:	3.2.12
-Release:	1
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	5742a1e1a7400120bf48ffcd4acaf1d8
+Patch0:		bug-18171.patch
 URL:		http://pear.php.net/package/HTML_QuickForm/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -60,6 +59,7 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
+%patch0 -p1
 mv docs/HTML_QuickForm/docs examples
 
 %install
@@ -75,10 +75,10 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc install.log
 %{php_pear_dir}/.registry/*.reg
-%dir %{php_pear_dir}/%{_class}/%{_subclass}/Renderer
-%dir %{php_pear_dir}/%{_class}/%{_subclass}/Rule
-%{php_pear_dir}/%{_class}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/Renderer/*.php
-%{php_pear_dir}/%{_class}/%{_subclass}/Rule/*.php
+%{php_pear_dir}/HTML/*.php
+%{php_pear_dir}/HTML/QuickForm/*.php
+%dir %{php_pear_dir}/HTML/QuickForm/Renderer
+%{php_pear_dir}/HTML/QuickForm/Renderer/*.php
+%dir %{php_pear_dir}/HTML/QuickForm/Rule
+%{php_pear_dir}/HTML/QuickForm/Rule/*.php
 %{_examplesdir}/%{name}-%{version}
