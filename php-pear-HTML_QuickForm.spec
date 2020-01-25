@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname HTML_QuickForm
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - methods for creating, validating, processing HTML forms
 Summary(pl.UTF-8):	%{pearname} - metody do tworzenia, kontroli i przetwarzania formularzy HTML
 Name:		php-pear-%{pearname}
